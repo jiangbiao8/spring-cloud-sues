@@ -1,0 +1,9 @@
+spring:
+  application:
+   name: service-member
+server:
+  port: 8771
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/

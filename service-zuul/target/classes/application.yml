@@ -1,0 +1,18 @@
+spring:
+  application:
+   name: service-zuul
+server:
+  port: 8765
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-member/**
+      serviceId: service-member
+    api-b:
+      path: /api-order/**
+      serviceId: service-order
